@@ -17,7 +17,7 @@ public class CachedThreadPool {
             exec.execute(new LiftOff());
         // 启动一个有序的关闭，先前提交的任务将继续被执行，但不接受新的任务。
         // 如果已经关闭，则调用没有额外的效果。
-        // 此方法不等待先前提交的任务完成执行，使用awaitterminate来做这件事。
+        // 此方法不等待先前提交的任务完成执行，使用awaitTermination来做这件事。
         exec.shutdown();
     }
 }
